@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+
+    android:background="?android:selectableItemBackground"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:id="@+id/l1"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="4dp"
+
+        android:paddingLeft="10dp"
+        android:paddingTop="4dp"
+
+        android:text="Sample title"
+
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:drawableLeft="@drawable/update"
+        android:gravity="center"
+        android:paddingLeft="70dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:text="Update "
+        android:textColor="#F20288D1"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/itemTitle3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:drawableLeft="@drawable/delet"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:text=""
+        android:textColor="#9c2867"
+        android:textSize="15sp" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/l2"
+            android:layout_below="@+id/l1"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="4dp"
+
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+
+                android:text="Sample title"
+
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/ammount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+
+
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/l3"
+            android:layout_below="@+id/l2"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/category11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="4dp"
+
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+
+                android:text="Sample title"
+
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/l4"
+            android:layout_below="@+id/l3"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/sub_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="4dp"
+
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+
+                android:text="Sample title"
+
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <!--        android:background="@drawable/cate_bg_green"-->
+
+
+        <com.zaptas.printindiamart.rippel.RippleView
+            android:id="@+id/rect_ripp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_below="@id/l4"
+            android:gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:background="#000000"
+            ripple:rv_type="rectangle"
+            ripple:rv_zoom="true">
+
+
+
+
+
+        </com.zaptas.printindiamart.rippel.RippleView>
+
+
+    </RelativeLayout>
+
+
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_left"
+        android:src="@drawable/icon_phone_30_green"/>
+-->
+    <com.zaptas.printindiamart.wideget.RecyclerViewWithNavigationArrows
+        android:id="@+id/recycler_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" />
+    <!--  <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/img_right"
+          android:src="@drawable/icon_address_40_blue"/>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#FFA000"></View>
+</LinearLayout>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zaptas.printindiamart.seller.Seller_Banner">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/l11"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="update"
+            android:text="Add New"
+            android:textColor="#fff"
+            android:background="#9c2867"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/l11"
+        android:layout_height="wrap_content">
+        <GridView
+            android:id="@+id/lv_viewall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:groupIndicator="@android:color/transparent"
+            android:divider="#00000000"
+            android:numColumns="1"
+
+            android:childDivider="#00000000"
+            />
+    </LinearLayout>
+</RelativeLayout>

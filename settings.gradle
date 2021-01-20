@@ -1,0 +1,2 @@
+rootProject.name='PrintIndiaMart'
+include ':app'

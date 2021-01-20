@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/seller"
+            android:icon="@drawable/ic_menu_gallery"
+            app:showAsAction="never"
+            android:title="Seller" />
+        <item
+            android:id="@+id/user"
+            app:showAsAction="never"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="User" />
+        <item
+            android:id="@+id/logout1"
+            app:showAsAction="never"
+
+            android:icon="@drawable/ic_lock_black_24dp"
+            android:title="LogOut" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="About us" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_local_phone_black_24dp"
+            android:title="Contact Us" />
+
+    </group>
+
+
+</menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.zaptas.printindiamart.AboutUs">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+
+        android:layout_height="?attr/actionBarSize"
+        android:background="#F20288D1"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="@color/white"></androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+
+        android:layout_height="wrap_content">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:lineSpacingExtra="10dp"
+                    android:padding="5dp"
+                    android:text="PrintIndiaMart is online B2B marketplace, connecting buyers with suppliers.You can sell your printing related product such as  UV PRINTING, LETTER PRESS PRINTING, FLEX PRINTING and etc. PrintIndiaMart promote only printing business and provide Wider marketplace with a range of products and suppliers.  PrintIndiaMart is a platform where buyers can connect with sellers anytime through mail and messages and can share their requirements.PrintIndiaMart helps you to grow your business. This platform will not only increase your credibility but also help you to increase your Brand credibility."
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:textColor="#000000"
+                    android:lineSpacingExtra="10dp"
+                    android:text="OUR MISSION IS TO MAKE BUSINESS EASY FOR EVERYONE."/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text=" Anytime anywhere access n Easy to use \n Enhance the productivity of your business \n Modify your product anytime \n * Easily connect with buyers"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+</LinearLayout>
+</LinearLayout>

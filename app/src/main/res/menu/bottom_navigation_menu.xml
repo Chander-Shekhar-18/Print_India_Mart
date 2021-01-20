@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeNavigation"
+        android:title="Home"
+        android:icon="@drawable/home"
+        android:iconTint="@color/white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/becomeSeller"
+        android:title="Become Seller"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"/>
+
+    <item
+        android:id="@+id/myAccount"
+        android:title="My account"
+        android:iconTint="@color/white"
+        app:showAsAction="always"
+        android:icon="@drawable/user_profile"/>
+
+</menu>

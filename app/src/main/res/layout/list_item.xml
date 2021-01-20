@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp">
+
+
+        <TextView
+            android:id="@+id/itemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/montserrat"
+
+            android:letterSpacing="0.05"
+            android:paddingLeft="10dp"
+
+            android:paddingTop="4dp"
+
+            android:paddingBottom="4dp"
+            android:text="Sample title"
+            android:textAllCaps="true"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <!--        android:background="@drawable/cate_bg_green"-->
+
+
+        <com.zaptas.printindiamart.rippel.RippleView
+            android:id="@+id/rect_ripp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/custom_button"
+            android:gravity="center_vertical"
+            ripple:rv_type="rectangle"
+            ripple:rv_zoom="true">
+
+
+            <TextView
+                android:id="@+id/itemTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+
+                android:fontFamily="@font/cantarell"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="View All"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </com.zaptas.printindiamart.rippel.RippleView>
+
+
+    </RelativeLayout>
+
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_left"
+        android:src="@drawable/icon_phone_30_green"/>
+-->
+
+    <com.zaptas.printindiamart.wideget.RecyclerViewWithNavigationArrows
+        android:id="@+id/recycler_view_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" />
+    <!--  <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_right"
+        android:src="@drawable/icon_address_40_blue"/>-->
+
+
+</LinearLayout>
+

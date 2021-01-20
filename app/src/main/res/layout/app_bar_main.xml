@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zaptas.printindiamart.MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/white"
+        android:background="@android:color/transparent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="  "
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="13dp"
+            android:layout_height="80dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginRight="70dp"
+        app:srcCompat="@drawable/printindiafulllogo" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

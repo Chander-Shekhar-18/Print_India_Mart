@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="#cdd1d4"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="0dp"
+        android:background="#b4b0b0"
+
+        >
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:background="#9c2867"
+
+
+            >
+                <TextView
+                    android:id="@+id/textViewr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:text=""
+                    android:background="#FFB600"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9c2867"
+
+
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="#ffffff"
+
+            >
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Get a quick quote from this supplier"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableRight="#9c2867"
+                    android:drawablePadding="5dp"
+
+                    />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="Product Quantity:"/>
+            <EditText
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:drawablePadding="5dp"
+android:hint="    "
+                android:textColor="#000000"
+
+
+                />
+</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="Enter Contact number:"/>
+                <EditText
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:drawablePadding="5dp"
+                    android:hint="+91-**********"
+                    android:textColor="#000000"
+
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:text="Enter Requirements"/>
+                <EditText
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:drawablePadding="5dp"
+                    android:hint="                                    "
+                    android:textColor="#000000"
+
+
+                    />
+            </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+
+
+                    android:padding="0dp"
+                    android:weightSum="1">
+
+
+                    <com.zaptas.printindiamart.rippel.RippleView
+                        android:id="@+id/rect_ripp1"
+                        android:layout_width="100dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content"
+                        ripple:rv_type="rectangle"
+                        ripple:rv_zoom="true">
+
+
+                        <TextView
+                            android:id="@+id/btnOkRating"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+android:background="#9c2867"
+                            android:text="Submit"
+                            android:textSize="16dp"
+                            android:textColor="#ffffff"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:elevation="0dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </com.zaptas.printindiamart.rippel.RippleView>
+
+
+
+
+
+
+                    <com.zaptas.printindiamart.rippel.RippleView
+                        android:id="@+id/rect_ripp2"
+                        android:layout_width="100dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_height="wrap_content"
+                        ripple:rv_type="rectangle"
+                        ripple:rv_zoom="true">
+
+
+                        <TextView
+                            android:id="@+id/btn_done"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Close"
+                            android:textSize="16dp"
+                            android:textColor="#9c2867"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:elevation="0dp"/>
+                    </com.zaptas.printindiamart.rippel.RippleView>
+
+
+
+
+
+                    <!--<Button
+                        android:id="@+id/btnOkRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+
+                        android:background="@drawable/gradient_buttons_blue"
+                        android:text="Submit"
+                        android:textColor="@color/white"
+                        android:elevation="1dp"/>
+
+
+                   <Button
+                        android:id="@+id/btnCancelRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="cancel"
+                       android:background="@drawable/gradient_buttons_grey"
+
+
+                       android:textColor="#DA251C"
+                        android:elevation="1dp"/>-->
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

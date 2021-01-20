@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#9c2867"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#e8e8e7"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update profile"
+                android:textColor="#2582C5"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal|center_vertical"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="#f3f3f3"
+                android:hint="First Name"
+                android:id="@+id/firstname"
+                android:paddingLeft="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Last Name"
+                android:inputType="number"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="Last Name"
+                android:id="@+id/lastname"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile no."
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/mobileno"
+                android:hint="Mobile no."
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comapny Name"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/companyname"
+                android:hint="Company Name"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pin Code"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="PIN Code"
+                android:id="@+id/pin"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="City"
+                android:id="@+id/city"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/adress"
+                android:hint="Address"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Primary Businees Type"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/business"
+                android:hint="Primary Businees Type"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Employee"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/noe"
+                android:hint="Number of Employee"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anual Turn Over"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:id="@+id/anuaal"
+                android:layout_height="40dp"
+                android:hint="Annual Turn Over"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OwnerShip Type"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/ownership"
+                android:hint="OwnerShip Type"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GSTIN"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/gst"
+                android:hint="GSTIN"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAN"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:hint="TAN"
+                android:id="@+id/tan"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAN No."
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/pan"
+                android:hint="PAN Number"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CIN No."
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:id="@+id/cin"
+                android:hint="CIN No"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DGFT/IC Code"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+
+            <EditText android:layout_width="fill_parent"
+            android:id="@+id/dgft"
+                android:layout_height="40dp"
+                android:hint="DGFT/IC Code"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"/>
+
+
+            <Button android:layout_width="190dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="submitdata"
+                android:layout_marginTop="16dp"
+                android:text="submit"
+                android:textColor="#fff"
+                android:background="@drawable/btn"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
