@@ -29,7 +29,8 @@
             android:text="Submit"
             android:onClick="submit"
             android:textColor="#ffffff"
-            android:background="#9c2867"
+            android:textSize="16sp"
+            android:background="@drawable/custom_button"
             android:layout_height="60dp" />
     </LinearLayout>
 </RelativeLayout>

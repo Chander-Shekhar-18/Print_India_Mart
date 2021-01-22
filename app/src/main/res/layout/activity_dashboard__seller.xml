@@ -70,8 +70,7 @@
                 <LinearLayout
                     android:id="@+id/l2"
                     android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -156,7 +155,7 @@
                     android:id="@+id/l3"
                     android:layout_width="match_parent"
 
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -233,17 +232,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/lks1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
 
-                android:layout_below="@id/l1"
-                android:layout_marginTop="5dp"
-                android:gravity="center">
-
-
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/bottomBar"
