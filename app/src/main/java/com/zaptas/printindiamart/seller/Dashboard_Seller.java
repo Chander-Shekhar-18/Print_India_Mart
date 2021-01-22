@@ -14,17 +14,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.zaptas.printindiamart.MainActivity;
 import com.zaptas.printindiamart.R;
+import com.zaptas.printindiamart.User_Mobile;
+import com.zaptas.printindiamart.startingscreen.SellerLogin;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+
 
 public class Dashboard_Seller extends AppCompatActivity {
     TextView package1, prd, lead;
@@ -46,6 +50,37 @@ public class Dashboard_Seller extends AppCompatActivity {
             startActivity(intent);
         }
         new GetData_Viewall().execute();
+
+
+        BottomNavigationView bottomNavigationView;
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.myAccount);
+        bottomNavigationView.setSelectedItemId(R.id.becomeSeller);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.homeNavigation:
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
+                        finish();
+                        return true;
+
+                    case R.id.myAccount:
+                        Intent intent = new Intent(getApplicationContext(), User_Mobile.class);
+                        startActivity(intent);
+                        finish();
+                        return true;
+
+                    case R.id.becomeSeller:
+                       return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
     }
 
     class GetData_Viewall extends AsyncTask<Void, Void, Void> {

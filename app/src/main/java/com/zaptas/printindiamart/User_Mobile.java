@@ -15,15 +15,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+import com.zaptas.printindiamart.seller.Dashboard_Seller;
+import com.zaptas.printindiamart.startingscreen.SellerLogin;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+
+import static com.zaptas.printindiamart.MainActivity.user_id;
+import static com.zaptas.printindiamart.MainActivity.usertype;
 
 public class User_Mobile extends AppCompatActivity {
     EditText mobileno;
@@ -45,6 +51,47 @@ public class User_Mobile extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        BottomNavigationView bottomNavigationView;
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.myAccount);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.homeNavigation:
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
+                        finish();
+                        return true;
+
+                    case R.id.myAccount:
+                        return true;
+
+                    case R.id.becomeSeller:
+                        usertype = Methods.getUSERTYPE(getApplicationContext());
+                        user_id = Methods.getUSERID(getApplicationContext());
+                        if (user_id == null) {
+                            Intent intent2 = new Intent(User_Mobile.this, SellerLogin.class);
+                            startActivity(intent2);
+                            finish();
+                        } else {
+                            if (usertype.equals("seller")) {
+                                Intent intent3 = new Intent(User_Mobile.this, Dashboard_Seller.class);
+                                startActivity(intent3);
+                                finish();
+                            }
+                        }
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
+
     }
 
     public void submit(View arg) {

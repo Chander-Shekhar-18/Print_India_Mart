@@ -163,6 +163,7 @@ public class MainActivity extends AppCompatActivity
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -171,11 +172,23 @@ public class MainActivity extends AppCompatActivity
                         return true;
 
                     case R.id.myAccount:
-                        Toast.makeText(getApplicationContext(), "my account", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(MainActivity.this, User_Mobile.class);
+                        startActivity(intent);
                         return true;
 
                     case R.id.becomeSeller:
-                        Toast.makeText(getApplicationContext(), "You are now seller", Toast.LENGTH_SHORT).show();
+                        usertype = Methods.getUSERTYPE(getApplicationContext());
+                        user_id = Methods.getUSERID(getApplicationContext());
+                        if (user_id == null) {
+                            Intent intent2 = new Intent(MainActivity.this, SellerLogin.class);
+                            startActivity(intent2);
+                        } else {
+                            if (usertype.equals("seller")) {
+                                Intent intent3 = new Intent(MainActivity.this, Dashboard_Seller.class);
+                                startActivity(intent3);
+                            }
+                        }
                         return true;
 
                     default:
