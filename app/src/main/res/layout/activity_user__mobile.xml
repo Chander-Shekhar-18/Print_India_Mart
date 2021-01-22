@@ -73,4 +73,7 @@
             android:text="Continue"
             android:textColor="@android:color/white" />
     </LinearLayout>
+
+    <include
+        layout="@layout/bottom_navigation"/>
 </RelativeLayout>
