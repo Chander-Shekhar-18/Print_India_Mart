@@ -4,192 +4,211 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c6c2c2"
     tools:context="com.zaptas.printindiamart.seller.AddProduct">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:gravity="center"
-android:orientation="horizontal"
-        android:id="@+id/l1"
-        android:layout_height="50dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
-        <TextView
-            android:background="#ffffff"
-            android:layout_width="wrap_content"
-            android:text="Image"
-            android:layout_marginRight="5dp"
-            android:onClick="image_upload1"
-            android:id="@+id/imgg1"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:drawableLeft="@drawable/upload"/>
-            <TextView
-                android:background="#ffffff"
-                android:layout_width="wrap_content"
-                android:text="Done"
-                android:visibility="gone"
-                android:layout_marginRight="5dp"
-                android:onClick="image_upload1"
-                android:id="@+id/imgg1s"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/suss"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <TextView
-            android:background="#ffffff"
-            android:layout_width="wrap_content"
-            android:id="@+id/imgg2"
-            android:text="Image"
-            android:textSize="20dp"
-            android:onClick="image_upload2"
-            android:layout_marginRight="5dp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:drawableLeft="@drawable/upload"/>
-            <TextView
-                android:background="#ffffff"
-                android:layout_width="wrap_content"
-                android:id="@+id/imgg2s"
-                android:text="Done"
-                android:textSize="20dp"
-                android:visibility="gone"
-                android:onClick="image_upload2"
-                android:layout_marginRight="5dp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/suss"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <TextView
-            android:background="#ffffff"
-            android:layout_width="wrap_content"
-            android:id="@+id/imgg3"
-            android:text="Image"
-            android:textSize="20dp"
-            android:layout_marginRight="5dp"
-            android:onClick="image_upload3"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:drawableLeft="@drawable/upload"/>
-            <TextView
-                android:background="#ffffff"
-                android:layout_width="wrap_content"
-                android:id="@+id/imgg3s"
-                android:text="Done"
-                android:visibility="gone"
-                android:textSize="20dp"
-                android:layout_marginRight="5dp"
-                android:onClick="image_upload3"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableLeft="@drawable/suss"/>
-        </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:id="@+id/l2"
-        android:layout_below="@+id/l1"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="260dp"
-            android:layout_height="50dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:popupBackground="#FFFF99"/>
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="260dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:popupBackground="#FFFF99"/>
-    <EditText
-        android:background="@drawable/testing_gradient"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:textColor="#000000"
-        android:id="@+id/productname"
-        android:hint="Product Name"
-        android:paddingLeft="6dp"
-        android:layout_height="60dp"/>
-        <EditText
-            android:background="@drawable/testing_gradient"
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:id="@+id/product_quantity"
-            android:textColor="#000000"
-            android:inputType="number"
-            android:hint="Product Quantity"
-            android:paddingLeft="6dp"
-            android:layout_height="60dp"/>
-        <EditText
-            android:background="@drawable/testing_gradient"
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:textColor="#000000"
-            android:id="@+id/product_ammount"
-            android:inputType="number"
-            android:hint="Ammount"
-            android:paddingLeft="6dp"
-            android:layout_height="60dp"/>
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        <EditText
-            android:background="@drawable/testing_gradient"
-            android:layout_width="match_parent"
-            android:id="@+id/product_desc"
-            android:layout_margin="5dp"
-            android:textColor="#000000"
-            android:hint="Product Description"
-            android:paddingLeft="6dp"
-            android:layout_height="60dp"/>
-        <EditText
-            android:background="@drawable/testing_gradient"
-            android:layout_width="match_parent"
-            android:layout_margin="5dp"
-            android:textColor="#000000"
-            android:id="@+id/product_feature"
-            android:hint="Product Feature"
-            android:paddingLeft="6dp"
-            android:layout_height="60dp"/>
-        <Button
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_margin="30dp"
-            android:text="Submit"
-            android:onClick="submit_data"
-            android:textColor="#ffffff"
-            android:background="#9c2867"
-            android:layout_height="60dp" />
-    </LinearLayout>
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/imgg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:drawableLeft="@drawable/upload"
+                        android:onClick="image_upload1"
+                        android:text="Image"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/imgg1s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:drawableLeft="@drawable/suss"
+                        android:onClick="image_upload1"
+                        android:text="Done"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/imgg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:textColor="#000"
+                        android:drawableLeft="@drawable/upload"
+                        android:onClick="image_upload2"
+                        android:text="Image"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/imgg2s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:drawableLeft="@drawable/suss"
+                        android:onClick="image_upload2"
+                        android:text="Done"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/imgg3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:textColor="#000"
+                        android:drawableLeft="@drawable/upload"
+                        android:onClick="image_upload3"
+                        android:text="Image"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/imgg3s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:background="#ffffff"
+                        android:drawableLeft="@drawable/suss"
+                        android:onClick="image_upload3"
+                        android:text="Done"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+
+                    android:layout_below="@+id/textView1"
+                    android:layout_alignParentLeft="true"
+                    android:popupBackground="#FFFF99" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/textView1"
+                    android:layout_alignParentLeft="true"
+                    android:popupBackground="#FFFF99" />
+
+                <EditText
+                    android:id="@+id/productname"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edt_text"
+                    android:hint="Product Name"
+                    android:paddingLeft="6dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/product_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edt_text"
+                    android:hint="Product Quantity"
+                    android:inputType="number"
+                    android:paddingLeft="6dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/product_ammount"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edt_text"
+                    android:hint="Ammount"
+                    android:inputType="number"
+                    android:paddingLeft="6dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/product_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edt_text"
+                    android:hint="Product Description"
+                    android:paddingLeft="6dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/product_feature"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edt_text"
+                    android:hint="Product Feature"
+                    android:paddingLeft="6dp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/custom_button"
+                    android:onClick="submit_data"
+                    android:text="Submit"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

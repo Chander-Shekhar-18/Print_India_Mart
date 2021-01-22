@@ -8,14 +8,16 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
 
         android:layout_height="wrap_content">
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/edt_text"
             android:id="@+id/about"/>
         <Button
             android:layout_width="wrap_content"
@@ -23,8 +25,11 @@
             android:id="@+id/updatee"
             android:textColor="#fff"
             android:gravity="center"
-            android:background="#9c2867"
+            android:layout_below="@+id/about"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button"
             android:text="Submit"/>
-    </LinearLayout>
+    </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
