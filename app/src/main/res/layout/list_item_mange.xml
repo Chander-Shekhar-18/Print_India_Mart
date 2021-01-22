@@ -1,94 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:ripple="http://schemas.android.com/apk/res-auto"
-
     android:background="?android:selectableItemBackground"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="1dp">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:id="@+id/l1"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/itemTitle"
-        android:layout_width="wrap_content"
 
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:paddingBottom="4dp"
-
-        android:paddingLeft="10dp"
-        android:paddingTop="4dp"
-
-        android:text="Sample title"
-
-        android:textAllCaps="true"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/itemTitle2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:drawableLeft="@drawable/update"
-        android:gravity="center"
-        android:paddingLeft="70dp"
-        android:paddingTop="4dp"
-        android:paddingRight="8dp"
-        android:paddingBottom="4dp"
-        android:text="Update "
-        android:textColor="#F20288D1"
-        android:textSize="15sp" />
-    <TextView
-        android:id="@+id/itemTitle3"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
-        android:drawableLeft="@drawable/delet"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:paddingTop="4dp"
-        android:paddingRight="8dp"
-        android:paddingBottom="4dp"
-        android:text=""
-        android:textColor="#9c2867"
-        android:textSize="15sp" />
-</LinearLayout>
         <LinearLayout
+            android:id="@+id/l1"
             android:layout_width="match_parent"
-            android:id="@+id/l2"
-            android:layout_below="@+id/l1"
             android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/quantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:paddingBottom="4dp"
 
+            <TextView
+                android:id="@+id/itemTitle"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:paddingLeft="10dp"
+
                 android:paddingTop="4dp"
+                android:paddingBottom="4dp"
 
                 android:text="Sample title"
 
                 android:textAllCaps="true"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:drawableLeft="@drawable/update"
+                android:gravity="center"
+                android:paddingLeft="70dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text="Update "
+                android:textColor="#F20288D1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/itemTitle3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:drawableLeft="@drawable/delet"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:text=""
+                android:textColor="#9c2867"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l1">
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="10dp"
+
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+
+                android:text="Sample title"
+
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/ammount"
                 android:layout_width="wrap_content"
@@ -110,20 +114,21 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:id="@+id/l3"
-            android:layout_below="@+id/l2"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l2">
+
             <TextView
                 android:id="@+id/category11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:paddingBottom="4dp"
-
+                android:layout_alignParentLeft="true"
                 android:paddingLeft="10dp"
+
                 android:paddingTop="4dp"
+                android:paddingBottom="4dp"
 
                 android:text="Sample title"
 
@@ -133,21 +138,23 @@
 
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
             android:id="@+id/l4"
-            android:layout_below="@+id/l3"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/l3">
+
             <TextView
                 android:id="@+id/sub_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:paddingBottom="4dp"
-
+                android:layout_alignParentLeft="true"
                 android:paddingLeft="10dp"
+
                 android:paddingTop="4dp"
+                android:paddingBottom="4dp"
 
                 android:text="Sample title"
 
@@ -164,26 +171,22 @@
             android:id="@+id/rect_ripp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-android:layout_below="@id/l4"
-            android:gravity="center_vertical"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="8dp"
+            android:layout_below="@id/l4"
             android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
             android:background="#000000"
+            android:gravity="center_vertical"
             ripple:rv_type="rectangle"
             ripple:rv_zoom="true">
-
-
-
 
 
         </com.zaptas.printindiamart.rippel.RippleView>
 
 
     </RelativeLayout>
-
 
 
     <!--<ImageView
@@ -207,7 +210,7 @@ android:layout_below="@id/l4"
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5dp"
+        android:layout_height="3dp"
         android:background="#FFA000"></View>
 </LinearLayout>
 
