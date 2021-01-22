@@ -69,14 +69,14 @@
                     android:onClick="forgetpassword"
                     android:text="Forgot Password"/>
 
-                <ImageButton
+                <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_gravity="end"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="25dp"
                     android:id="@+id/signin"
-                    android:src="@drawable/ic_launcher"
+                    android:src="@drawable/printindialogo"
                    />
 
 

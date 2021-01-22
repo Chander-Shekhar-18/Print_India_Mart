@@ -1,334 +1,377 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent">
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#9c2867"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="48dp"
+            android:layout_alignParentTop="true"
             android:background="#e8e8e7"
-            android:orientation="horizontal"
-            android:layout_alignParentTop="true">
+            android:orientation="horizontal">
 
-            <TextView android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Update profile"
-                android:textColor="#2582C5"
+                android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginLeft="25dp"
                 android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:text="Update profile"
                 android:textAlignment="center"
-                android:layout_gravity="center_horizontal|center_vertical"/>
+                android:textColor="#2582C5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="30dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="First Name"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
             <EditText
+                android:id="@+id/firstname"
                 android:layout_width="fill_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="15dp"
-                android:background="#f3f3f3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="First Name"
-                android:id="@+id/firstname"
                 android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:text="Last Name"
+                android:layout_marginTop="10dp"
                 android:inputType="number"
+                android:text="Last Name"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:hint="Last Name"
+            <EditText
                 android:id="@+id/lastname"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
+                android:hint="Last Name"
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Mobile no."
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+
+            <EditText
                 android:id="@+id/mobileno"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="Mobile no."
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Comapny Name"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+
+            <EditText
                 android:id="@+id/companyname"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="Company Name"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Pin Code"
-                android:textColor="#fff"
-                android:textSize="18sp"
+                android:textColor="#000"
+                android:textSize="18sp" />
 
-                />
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:hint="PIN Code"
+            <EditText
                 android:id="@+id/pin"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
-
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
+                android:hint="PIN Code"
+                android:paddingLeft="5dp" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="City"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:hint="City"
+            <EditText
                 android:id="@+id/city"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
+                android:hint="City"
+                android:paddingLeft="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Address"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
+
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/adress"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="Address"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Primary Businees Type"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/business"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="Primary Businees Type"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Number of Employee"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/noe"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="Number of Employee"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Anual Turn Over"
-                android:textColor="#fff"
+                android:textColor="#000"
+
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
+            <EditText
                 android:id="@+id/anuaal"
+                android:layout_width="fill_parent"
                 android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="Annual Turn Over"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="OwnerShip Type"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/ownership"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="OwnerShip Type"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="GSTIN"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/gst"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="GSTIN"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="TAN"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:hint="TAN"
+            <EditText
                 android:id="@+id/tan"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
+                android:hint="TAN"
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="PAN No."
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/pan"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="PAN Number"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="CIN No."
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-                android:layout_height="40dp"
+            <EditText
                 android:id="@+id/cin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="CIN No"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="DGFT/IC Code"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="18sp"
 
                 />
 
-            <EditText android:layout_width="fill_parent"
-            android:id="@+id/dgft"
+            <EditText
+                android:id="@+id/dgft"
+                android:layout_width="fill_parent"
                 android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_text"
                 android:hint="DGFT/IC Code"
-                android:background="#f3f3f3"
-                android:paddingLeft="5dp"
-                android:layout_marginTop="15dp"/>
+                android:paddingLeft="5dp" />
 
 
-            <Button android:layout_width="190dp"
+            <Button
+                android:layout_width="190dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center_horizontal"
-                android:onClick="submitdata"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:onClick="submitdata"
                 android:text="submit"
-                android:textColor="#fff"
-                android:background="@drawable/btn"/>
+                android:textColor="#fff" />
 
         </LinearLayout>
 
-        <LinearLayout android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="fill_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
 
-            >
+        <!--            >-->
 
 
-
-
-        </LinearLayout>
+        <!--        </LinearLayout>-->
 
 
     </LinearLayout>
-
 
 
 </ScrollView>
