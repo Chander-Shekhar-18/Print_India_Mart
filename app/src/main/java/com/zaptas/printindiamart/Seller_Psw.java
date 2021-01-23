@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.startingscreen;
+package com.zaptas.printindiamart;
 
 
 import android.os.Bundle;

@@ -13,7 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.zaptas.printindiamart.seller.Dashboard_Seller;
 import com.zaptas.printindiamart.util.Methods;
+
+import static com.zaptas.printindiamart.MainActivity.usertype;
 
 public class Search_Activity extends AppCompatActivity {
     EditText serch_value;
@@ -39,6 +42,46 @@ public class Search_Activity extends AppCompatActivity {
             Intent intent = new Intent(Search_Activity.this, User_Mobile.class);
             startActivity(intent);
         }
+
+        BottomNavigationView bottomNavigationView;
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
+        bottomNavigationView.setItemBackground(null);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.homeNavigation:
+                        Intent intent = new Intent(Search_Activity.this, MainActivity.class);
+                        startActivity(intent);
+                        return true;
+
+                    case R.id.myAccount:
+
+                        Intent intent3 = new Intent(Search_Activity.this, User_Mobile.class);
+                        startActivity(intent3);
+                        return true;
+
+                    case R.id.becomeSeller:
+                        usertype = Methods.getUSERTYPE(getApplicationContext());
+                        user_id = Methods.getUSERID(getApplicationContext());
+                        if (user_id == null) {
+                            Intent intent2 = new Intent(Search_Activity.this, SellerLogin.class);
+                            startActivity(intent2);
+                        } else {
+                            if (usertype.equals("seller")) {
+                                Intent intent4 = new Intent(Search_Activity.this, Dashboard_Seller.class);
+                                startActivity(intent4);
+                            }
+                        }
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
     }
 
     public void submit(View arg) {

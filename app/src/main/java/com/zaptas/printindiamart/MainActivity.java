@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,9 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
-import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,7 +33,6 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
@@ -54,7 +50,6 @@ import com.zaptas.printindiamart.actor.SlideActor;
 import com.zaptas.printindiamart.models.SectionDataModel;
 import com.zaptas.printindiamart.models.SingleItemModel;
 import com.zaptas.printindiamart.seller.Dashboard_Seller;
-import com.zaptas.printindiamart.startingscreen.SellerLogin;
 import com.zaptas.printindiamart.util.Methods;
 import com.zaptas.printindiamart.wideget.RecyclerViewWithNavigationArrows;
 

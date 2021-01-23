@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.startingscreen;
+package com.zaptas.printindiamart;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,9 +10,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.zaptas.printindiamart.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.zaptas.printindiamart.seller.Dashboard_Seller;
+import com.zaptas.printindiamart.startingscreen.Seller_OTP;
+import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONObject;
 
@@ -30,59 +34,99 @@ import java.util.regex.Pattern;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import static com.zaptas.printindiamart.MainActivity.user_id;
+import static com.zaptas.printindiamart.MainActivity.usertype;
+
 public class SellerRegistration extends AppCompatActivity {
-EditText fname,lname,company_namre,mobile,email;
-    public static  String firstname,lastname,company_name,mobile_no,email_id;
+    EditText fname, lname, company_namre, mobile, email;
+    public static String firstname, lastname, company_name, mobile_no, email_id;
     String EMAIL_STRING = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
             + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     boolean check;
     Pattern p;
     Matcher m;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_registration);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        fname= (EditText) findViewById(R.id.firstname);
-        lname= (EditText) findViewById(R.id.lastname);
-        company_namre= (EditText) findViewById(R.id.comapnyname);
-        mobile= (EditText) findViewById(R.id.mobile);
-        email= (EditText) findViewById(R.id.email);
+        fname = (EditText) findViewById(R.id.firstname);
+        lname = (EditText) findViewById(R.id.lastname);
+        company_namre = (EditText) findViewById(R.id.comapnyname);
+        mobile = (EditText) findViewById(R.id.mobile);
+        email = (EditText) findViewById(R.id.email);
+
+
+        BottomNavigationView bottomNavigationView;
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.becomeSeller);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.homeNavigation:
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        return true;
+
+                    case R.id.myAccount:
+
+                        Intent intent3 = new Intent(getApplicationContext(), User_Mobile.class);
+                        startActivity(intent3);
+                        return true;
+
+                    case R.id.becomeSeller:
+                        usertype = Methods.getUSERTYPE(getApplicationContext());
+                        user_id = Methods.getUSERID(getApplicationContext());
+                        if (user_id == null) {
+                            Intent intent2 = new Intent(getApplicationContext(), SellerLogin.class);
+                            startActivity(intent2);
+                        } else {
+                            if (usertype.equals("seller")) {
+                                Intent intent4 = new Intent(getApplicationContext(), Dashboard_Seller.class);
+                                startActivity(intent4);
+                            }
+                        }
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
     }
 
 
+    public void registered(View arg) {
+        firstname = fname.getText().toString();
+        lastname = lname.getText().toString();
+        company_name = company_namre.getText().toString();
+        mobile_no = mobile.getText().toString();
+        email_id = email.getText().toString();
+        if (firstname.equals("") || lastname.equals("") || company_name.equals("") || mobile_no.equals("") || email_id.equals("")) {
+            Toast.makeText(getApplicationContext(), "All field mandatory", Toast.LENGTH_SHORT).show();
+        } else {
 
+            p = Pattern.compile(EMAIL_STRING);
 
-public void registered(View arg){
-    firstname= fname.getText().toString();
-    lastname= lname.getText().toString();
-    company_name= company_namre.getText().toString();
-    mobile_no= mobile.getText().toString();
-    email_id= email.getText().toString();
-    if(firstname.equals("") || lastname.equals("") || company_name.equals("")|| mobile_no.equals("") || email_id.equals("")){
-        Toast.makeText(getApplicationContext(),"All field mandatory",Toast.LENGTH_SHORT).show();
-    }
-    else {
+            m = p.matcher(email_id);
+            check = m.matches();
 
-        p = Pattern.compile(EMAIL_STRING);
-
-        m = p.matcher(email_id);
-        check = m.matches();
-
-        if(!check) {
-            Toast.makeText(getApplicationContext(),"Invalid email id.",Toast.LENGTH_SHORT).show();
+            if (!check) {
+                Toast.makeText(getApplicationContext(), "Invalid email id.", Toast.LENGTH_SHORT).show();
+            } else {
+                new Registration().execute();
+            }
         }
-        else {
-        new Registration().execute();
-        }
+
+
     }
-
-
-}
 
     public class Registration extends AsyncTask<String, Void, String> {
         ProgressDialog dialog;
+
         protected void onPreExecute() {
 
             super.onPreExecute();
@@ -107,10 +151,6 @@ public void registered(View arg){
                 postDataParams.put("Company_Name", company_name);
                 postDataParams.put("Phone", mobile_no);
                 postDataParams.put("privacy", "1");
-
-
-
-
 
 
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -186,6 +226,7 @@ public void registered(View arg){
 */
         }
     }
+
     public String getPostDataString(JSONObject params) throws Exception {
 
         StringBuilder result = new StringBuilder();
@@ -193,9 +234,9 @@ public void registered(View arg){
 
         Iterator<String> itr = params.keys();
 
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
 
-            String key= itr.next();
+            String key = itr.next();
             Object value = params.get(key);
 
             if (first)
@@ -210,6 +251,7 @@ public void registered(View arg){
         }
         return result.toString();
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

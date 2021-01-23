@@ -24,9 +24,13 @@ public class SplashSreen extends AppCompatActivity {
                     sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    Intent intent = new Intent(SplashSreen.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 } finally {
                     Intent intent = new Intent(SplashSreen.this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         };

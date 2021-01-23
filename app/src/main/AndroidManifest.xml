@@ -26,12 +26,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".startingscreen.Welcome_Screen"></activity>
-        <activity android:name=".startingscreen.SellerRegistration"
+        <activity android:name=".SellerRegistration"
             android:label="Seller Registration">
 
         </activity>
         <activity
-            android:name=".startingscreen.SellerLogin"
+            android:name=".SellerLogin"
             android:label="Seller" />
         <activity
             android:name=".seller.Dashboard_Seller"
@@ -58,7 +58,7 @@
             android:name=".seller.ManageProduct"
             android:label="Manage Product" />
         <activity android:name=".startingscreen.Seller_OTP" />
-        <activity android:name=".startingscreen.Seller_Psw" />
+        <activity android:name=".Seller_Psw" />
         <activity android:name=".Product_Detail" />
         <activity android:name=".ContactSeller" />
         <activity

@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.startingscreen;
+package com.zaptas.printindiamart;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -13,10 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-import com.zaptas.printindiamart.R;
 import com.zaptas.printindiamart.seller.Dashboard_Seller;
 import com.zaptas.printindiamart.seller.Forget_Password;
 import com.zaptas.printindiamart.util.Methods;
@@ -26,6 +26,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+
+import static com.zaptas.printindiamart.MainActivity.user_id;
+import static com.zaptas.printindiamart.MainActivity.usertype;
 
 public class SellerLogin extends AppCompatActivity {
     JSONObject jsonObject;
@@ -42,6 +45,45 @@ public class SellerLogin extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);*/
         Email=(EditText) findViewById(R.id.email);
         password=(EditText) findViewById(R.id.password);
+
+
+        BottomNavigationView bottomNavigationView;
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.becomeSeller);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.homeNavigation:
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        return true;
+
+                    case R.id.myAccount:
+
+                        Intent intent3 = new Intent(getApplicationContext(), User_Mobile.class);
+                        startActivity(intent3);
+                        return true;
+
+                    case R.id.becomeSeller:
+                        usertype = Methods.getUSERTYPE(getApplicationContext());
+                        user_id = Methods.getUSERID(getApplicationContext());
+                        if (user_id == null) {
+                            Intent intent2 = new Intent(getApplicationContext(), SellerLogin.class);
+                            startActivity(intent2);
+                        } else {
+                            if (usertype.equals("seller")) {
+                                Intent intent4 = new Intent(getApplicationContext(), Dashboard_Seller.class);
+                                startActivity(intent4);
+                            }
+                        }
+                        return true;
+
+                    default:
+                        return false;
+                }
+            }
+        });
 
     }
 

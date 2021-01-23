@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,7 +20,6 @@ import com.squareup.okhttp.Response;
 import com.zaptas.printindiamart.MainActivity;
 import com.zaptas.printindiamart.R;
 import com.zaptas.printindiamart.User_Mobile;
-import com.zaptas.printindiamart.startingscreen.SellerLogin;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONException;

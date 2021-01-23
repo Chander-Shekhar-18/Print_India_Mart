@@ -24,7 +24,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.zaptas.printindiamart.R;
-import com.zaptas.printindiamart.startingscreen.SellerLogin;
+import com.zaptas.printindiamart.SellerLogin;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONObject;

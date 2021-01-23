@@ -19,7 +19,7 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.zaptas.printindiamart.MainActivity;
 import com.zaptas.printindiamart.R;
-import com.zaptas.printindiamart.startingscreen.SellerLogin;
+import com.zaptas.printindiamart.SellerLogin;
 
 import org.json.JSONException;
 import org.json.JSONObject;
