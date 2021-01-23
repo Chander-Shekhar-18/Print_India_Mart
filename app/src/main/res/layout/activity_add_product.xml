@@ -67,10 +67,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginRight="5dp"
-                        android:textColor="#000"
                         android:drawableLeft="@drawable/upload"
                         android:onClick="image_upload2"
                         android:text="Image"
+                        android:textColor="#000"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -99,10 +99,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginRight="5dp"
-                        android:textColor="#000"
                         android:drawableLeft="@drawable/upload"
                         android:onClick="image_upload3"
                         android:text="Image"
+                        android:textColor="#000"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -201,8 +201,8 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="40dp"
                     android:layout_marginLeft="5dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/custom_button"
                     android:onClick="submit_data"
@@ -211,4 +211,6 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <include layout="@layout/bottom_navigation"/>
 </RelativeLayout>
