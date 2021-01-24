@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.seller;
+package com.zaptas.printindiamart;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

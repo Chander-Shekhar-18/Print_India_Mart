@@ -1,7 +1,8 @@
-package com.zaptas.printindiamart.seller;
+package com.zaptas.printindiamart;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
 
@@ -26,7 +27,6 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.squareup.picasso.Picasso;
-import com.zaptas.printindiamart.R;
 import com.zaptas.printindiamart.models.SingleItemModel;
 import com.zaptas.printindiamart.util.Methods;
 
@@ -38,36 +38,40 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.HttpUrl;
-
-public class SellerLead extends AppCompatActivity {
+public class Seller_Banner extends AppCompatActivity {
     private ProgressBar mProgress;
+    static String bandelet,error,msg;
     private int mProgressStatus = 0;
     private Handler mHandler = new Handler();
-    String product_image;
     private GridView gridview;
     static int lenArray=0;
     static private MyArrayAdapter productadapter_state;
     private OkHttpClient client;
+    private static Context context;
     JSONObject jsonObject;
     public static final String TAG = "TAG";
     private static Response response;
     static  String meth_cate_idd,  meth_cate_name;
     ArrayList<SingleItemModel> productlist;
     static List<SingleItemModel> modelList;
-
-    static String c_Id, c_Data;
-    static  String ser_typee, ser_cattid,APIMSG;
     static String se_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_lead);
+        setContentView(R.layout.activity_seller__banner);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-  //      getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         se_id=  Methods.getUSERID(this);
+        setTitle("Banner");
+        Seller_Banner.context = getApplicationContext();
+        System.out.println("jggjhfgjh"+meth_cate_idd+meth_cate_name);
+
+
+
+
         productlist = new ArrayList<>();
         productadapter_state = new MyArrayAdapter(this, productlist);
         gridview = (GridView)findViewById(R.id.lv_viewall);
@@ -75,10 +79,12 @@ public class SellerLead extends AppCompatActivity {
 
 
         new GetData_Viewall().execute();
-
     }
-
- /*   @Override
+    public void update(View arg){
+        Intent intent = new Intent(Seller_Banner.this, Update_Banner.class);
+        startActivity(intent);
+    }
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -87,7 +93,7 @@ public class SellerLead extends AppCompatActivity {
         }
         return true;
     }
-*/
+
 
 
     class GetData_Viewall extends AsyncTask<Void, Void, Void> {
@@ -96,7 +102,7 @@ public class SellerLead extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            dialog = new ProgressDialog(SellerLead.this);
+            dialog = new ProgressDialog(Seller_Banner.this);
             dialog.setMessage("Loading...");
 
             dialog.show();
@@ -110,8 +116,7 @@ public class SellerLead extends AppCompatActivity {
                 if (jsonObject != null) {
                     if (jsonObject.length() > 0) {
                         // JSONObject obj =jsonObject.getJSONObject("data");
-                        JSONArray array = jsonObject.getJSONArray("leads");
-                        APIMSG=jsonObject.getString("msg");
+                        JSONArray array = jsonObject.getJSONArray("seller_image");
                         int lenArray = array.length();
                         //   count = array.length();
 
@@ -119,37 +124,23 @@ public class SellerLead extends AppCompatActivity {
                             for (int jIndex = 0; jIndex < lenArray; jIndex++) {
                                 SingleItemModel actor = new SingleItemModel();
                                 JSONObject innerObject = array.getJSONObject(jIndex);
-                                String leadid = innerObject.getString("id");
-                                String name1 = innerObject.getString("product");
-
-                                String p_quantty = innerObject.getString("pqty");
-                                String pamount = innerObject.getString("pamount");
-                                String date = innerObject.getString("updated_at");
-                                String p_id = innerObject.getString("pid");
-                                String user_mobile = innerObject.getString("phone");
-                                JSONArray array2 = jsonObject.getJSONArray("product_image");
-                                int lenArray1 = array2.length();
-                                //   count = array.length();
-
-                                if (lenArray1 > 0) {
-                                    for (int jIndex1 = 0; jIndex1 < lenArray1; jIndex1++) {
+                                String subcategory_id1 = innerObject.getString("id");
+                                //String name1 = innerObject.getString("product_name");
+                                String cname1 = innerObject.getString("image");
+                                // String decription1 = innerObject.getString("product_quantity");
+                                //  String imgfile1 = innerObject.getString("pamount");
+                                // String status1 = innerObject.getString("pdescription");
+                                //  String str_subcategory_type = innerObject.getString("pname");
 
 
-                                        JSONObject innerObject1 = array2.getJSONObject(jIndex);
-                                        String p_im_id = innerObject1.getString("pid");
-                                        if (p_im_id.equals(p_id)) {
-                                            product_image = innerObject1.getString("pimage");
-
-                                        }
-                                    }}
 
 
-                                actor.setSt_subcategory_id(leadid);
-                                actor.setSt_name(name1);
-                                actor.setSt_cname(pamount);
-                                actor.setSt_decription(p_quantty);
-                                actor.setSt_imgfile(product_image);
-                                actor.setproduct_user_n(user_mobile);
+
+                                actor.setSt_subcategory_id(subcategory_id1);
+                                //  actor.setSt_name(name1);
+                                actor.setSt_cname(cname1);
+                                // actor.setSt_decription(decription1);
+                                actor.setSt_imgfile(cname1);
                                 //  actor.setSt_status(status1);
                                 // actor.setSt_subcategory_type(str_subcategory_type);
 
@@ -174,7 +165,7 @@ public class SellerLead extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             dialog.dismiss();
-            Toast.makeText(getApplicationContext(), APIMSG, Toast.LENGTH_LONG).show();
+
             if (productlist.size() > 0) {
                 productadapter_state.notifyDataSetChanged();
             } else {
@@ -190,11 +181,10 @@ public class SellerLead extends AppCompatActivity {
 
                     //   http://spacenterio.com/subdomain/filfox/ApiAdminController/subcategorybyid_get/8
 
-                    .url("https://printindiamart.com/public/api/leads_by_sellerid/"+se_id)
+                    .url("https://printindiamart.com/public/api/seller_image/"+se_id)
                     .build();
 
             response = client.newCall(request).execute();
-            System.out.println("8870000087"+"http://spacenterio.com/subdomain/filfox/ApiAdminController/subcategorybyid_get/"+meth_cate_idd);
             return new JSONObject(response.body().string());
         } catch (@NonNull IOException | JSONException e) {
             Log.e(TAG, "" + e.getLocalizedMessage());
@@ -202,7 +192,7 @@ public class SellerLead extends AppCompatActivity {
         return null;
     }
 
-    public static String GET(OkHttpClient client, HttpUrl url) throws IOException {
+/*    public static String GET(OkHttpClient client, HttpUrl url) throws IOException {
         Request request = new Request.Builder()
                 .build();
         Response responseOK = client.newCall(request).execute();
@@ -216,7 +206,7 @@ public class SellerLead extends AppCompatActivity {
                 .addQueryParameter("a", "a") //add query parameters to the URL
                 .addEncodedQueryParameter("a", "a")//add encoded query parameters to the URL
                 .build();
-    }
+    }*/
 
 
     public static class MyArrayAdapter extends ArrayAdapter<SingleItemModel> {
@@ -243,7 +233,7 @@ public class SellerLead extends AppCompatActivity {
             final ViewHolder vh;
 
             if (convertView == null) {
-                View view = mInflater.inflate(R.layout.adapter_lead, parent, false);
+                View view = mInflater.inflate(R.layout.logo_adapter, parent, false);
                 vh = ViewHolder.create((LinearLayout) view);
                 view.setTag(vh);
 
@@ -259,12 +249,11 @@ public class SellerLead extends AppCompatActivity {
 
 
 
-            vh.subcategory1.setText(item.getSt_name());
+            vh.subcategory1.setText(item.getSt_subcategory_id());
             vh.name1.setText(item.getSt_name());
             vh.cname1.setText("Quantity-:"+item.getSt_decription());
-            vh.description1.setText("Amount-: $"+item.getSt_cname());
-            vh.status1.setText(item.getproduct_user_n());
-            Picasso.get().load("https://printindiamart.com/public/photo/"+item.getSt_imgfile()).into(vh.imgfile1);
+            vh.description1.setText(item.getSt_decription());
+            Picasso.get().load("https://printindiamart.com/public/subdomain/schon/photo/"+item.getSt_imgfile()).into(vh.imgfile1);
 
 
             System.out.println("ghgfdgdfgdfghddfg"+item.getSt_status() );
@@ -285,58 +274,44 @@ public class SellerLead extends AppCompatActivity {
             }
 */
 
-            vh.rootView.setOnClickListener(new View.OnClickListener() {
+            vh.status1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
+                    String v_subcategory_id = item.getSt_subcategory_id();
 
 
 
-                 /*   String v_subcategory_id = item.getSt_subcategory_id();
-
-
-
-                    Intent in = new Intent(v.getContext(), Product_Detail.class);
-                    //   Intent in = new Intent(v.getContext(), Apply_Services.class);
+                Intent in = new Intent(v.getContext(), Edit_Banner.class);
                     in.putExtra("int_subcategory_id",v_subcategory_id);
-                    in.putExtra("int_cat_data",c_Data);
-
-
-
-                    v.getContext().startActivity(in);*/
+                    v.getContext().startActivity(in);
 
 
                 }
             });
 
-
-
-
-
-
-
-
-
-            System.out.println("nhjhngj"+ser_typee);
-
-
-
-
-            vh.imgfile1.setOnClickListener(new View.OnClickListener() {
+         /*   vh.status1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
 
-                    //   c_Id, c_Data;
 
 
-                    ser_typee = item.getSt_subcategory_type();
-                    ser_cattid = c_Id;
+                }
+            });
+*/
 
 
 
 
 
+
+            vh.delelet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    bandelet=item.getSt_subcategory_id();
+                    new GetData_deletBanner().execute();
                 }
 
 
@@ -362,11 +337,12 @@ public class SellerLead extends AppCompatActivity {
             public final TextView description1;
             public final ImageView imgfile1;
             public final TextView status1;
+            public final TextView delelet;
 
 
             private ViewHolder(LinearLayout rootView, TextView subcategory1, TextView name1,
                                TextView  cname1, TextView description1, ImageView imgfile1,
-                               TextView  status1) {
+                               TextView  status1, TextView delelet) {
                 this.rootView = rootView;
 
                 this.subcategory1 = subcategory1;
@@ -375,6 +351,7 @@ public class SellerLead extends AppCompatActivity {
                 this.description1 = description1;
                 this.imgfile1 = imgfile1;
                 this.status1 = status1;
+                this.delelet = delelet;
 
 
             }
@@ -389,24 +366,87 @@ public class SellerLead extends AppCompatActivity {
                 TextView  description1 = (TextView) rootView.findViewById(R.id.id_description);
                 ImageView  imgfile1 = (ImageView) rootView.findViewById(R.id.id_imgfile);
                 TextView status1 = (TextView) rootView.findViewById(R.id.id_statuss);
+                TextView delelet = (TextView) rootView.findViewById(R.id.delelet);
 
 
 
 
-                return new ViewHolder(rootView,  subcategory1, name1,cname1,description1,imgfile1,status1);
+                return new ViewHolder(rootView,  subcategory1, name1,cname1,description1,imgfile1,status1,delelet);
             }
         }
     }
+    static class GetData_deletBanner extends AsyncTask<Void, Void, Void> {
+        ProgressDialog dialog;
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+           /* dialog = new ProgressDialog(Seller_Banner.this);
+            dialog.setMessage("Loading...");
 
-                break;
+            dialog.show();
+            dialog.setCancelable(false);*/
         }
-        return true;
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            JSONObject jsonObject = getDataFromWebbaneer();
+            try {
+                if (jsonObject != null) {
+                    if (jsonObject.length() > 0) {
+                        // JSONObject obj =jsonObject.getJSONObject("data");
+                        msg = jsonObject.getString("msg");
+                        error = jsonObject.getString("error");
+
+                        //   count = array.length();
+
+
+                    }
+
+
+                } else {
+                }
+            } catch (JSONException je) {
+                //  Log.i(ParticularImage.TAG, "" + je.getLocalizedMessage());
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+
+            Toast.makeText(Seller_Banner.context, msg, Toast.LENGTH_LONG).show();
+            if(error.equals("false")){
+                Intent intent = new Intent(Seller_Banner.context, Seller_Banner.class);
+
+                Seller_Banner.context.startActivity(intent);
+            }
+          /*  dialog.dismiss();
+
+            if (productlist.size() > 0) {
+                productadapter_state.notifyDataSetChanged();
+            } else {
+                // Toast.makeText(getApplicationContext(), "No Menu", Toast.LENGTH_LONG).show();
+            }*/
+        }
     }
 
+    public static JSONObject getDataFromWebbaneer() {
+        try {
+            OkHttpClient client = new OkHttpClient();
+            Request request = new Request.Builder()
+
+                    //   http://spacenterio.com/subdomain/filfox/ApiAdminController/subcategorybyid_get/8
+
+                    .url("https://printindiamart.com/public/api/banner_delete/"+bandelet)
+                    .build();
+
+            response = client.newCall(request).execute();
+            return new JSONObject(response.body().string());
+        } catch (@NonNull IOException | JSONException e) {
+            Log.e(TAG, "" + e.getLocalizedMessage());
+        }
+        return null;
+    }
 }

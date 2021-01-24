@@ -16,11 +16,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-import com.zaptas.printindiamart.seller.Change_Password;
-import com.zaptas.printindiamart.seller.Purchase_Package;
-import com.zaptas.printindiamart.seller.SellerAbout_Us;
-import com.zaptas.printindiamart.seller.Seller_Add;
-import com.zaptas.printindiamart.seller.Seller_Banner;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONException;

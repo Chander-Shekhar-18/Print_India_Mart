@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.seller;
+package com.zaptas.printindiamart;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
-import com.zaptas.printindiamart.R;
 import com.zaptas.printindiamart.util.Methods;
 
 public class Seller_Add extends AppCompatActivity {

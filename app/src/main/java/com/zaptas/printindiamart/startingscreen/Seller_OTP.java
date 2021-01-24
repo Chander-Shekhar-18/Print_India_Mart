@@ -17,7 +17,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.zaptas.printindiamart.R;
-import com.zaptas.printindiamart.seller.Password_Update;
+import com.zaptas.printindiamart.Password_Update;
 
 import org.json.JSONException;
 import org.json.JSONObject;

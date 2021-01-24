@@ -37,8 +37,6 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.zaptas.printindiamart.models.Cat_Spinner_Model;
-import com.zaptas.printindiamart.seller.RealPathUtil;
-import com.zaptas.printindiamart.seller.Utility;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONArray;
@@ -152,7 +150,7 @@ public class AddProduct extends AppCompatActivity {
                             startActivity(intent2);
                         } else {
                             if (usertype.equals("seller")) {
-                                Intent intent4 = new Intent(getApplicationContext(), com.zaptas.printindiamart.seller.Dashboard_Seller.class);
+                                Intent intent4 = new Intent(getApplicationContext(), Dashboard_Seller.class);
                                 startActivity(intent4);
                             }
                         }

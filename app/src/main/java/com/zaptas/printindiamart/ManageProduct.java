@@ -109,7 +109,7 @@ public class ManageProduct extends AppCompatActivity {
                             startActivity(intent2);
                         } else {
                             if (usertype.equals("seller")) {
-                                Intent intent4 = new Intent(getApplicationContext(), com.zaptas.printindiamart.seller.Dashboard_Seller.class);
+                                Intent intent4 = new Intent(getApplicationContext(), Dashboard_Seller.class);
                                 startActivity(intent4);
                             }
                         }

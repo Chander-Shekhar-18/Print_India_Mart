@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.seller;
+package com.zaptas.printindiamart;
 
 import android.content.Intent;
 
@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.zaptas.printindiamart.R;
 import com.zaptas.printindiamart.util.Methods;
 
 public class SellerAbout_Us extends AppCompatActivity {

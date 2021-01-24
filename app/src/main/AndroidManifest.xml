@@ -18,6 +18,9 @@
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
+
+        <activity android:name=".Dashboard_Seller"/>
+
         <activity android:name=".startingscreen.SplashSreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,19 +29,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".startingscreen.Welcome_Screen"></activity>
-        <activity android:name=".SellerRegistration"
+        <activity
+            android:name=".SellerRegistration"
             android:label="Seller Registration">
 
         </activity>
         <activity
             android:name=".SellerLogin"
             android:label="Seller" />
-        <activity
-            android:name=".seller.SellerProfile"
-            android:label="Profile" />
-        <activity
-            android:name=".seller.SellerLead"
-            android:label="Lead" />
         <activity
             android:name=".ViewAllProduct"
             android:label="Lead" />
@@ -48,49 +46,60 @@
         <activity
             android:name=".ViewAllSubCategory"
             android:label="Lead" />
+
+        <activity android:name=".SellerLead"/>
+
+        <activity android:name=".ManageProduct"/>
+        <activity android:name=".SellerProfile"/>
+        <activity android:name=".AddProduct"/>
+
         <activity android:name=".startingscreen.Seller_OTP" />
         <activity android:name=".Seller_Psw" />
         <activity android:name=".Product_Detail" />
         <activity android:name=".ContactSeller" />
         <activity
-            android:name=".seller.Seller_Banner"
+            android:name=".Seller_Banner"
             android:label="Banner" />
         <activity
-            android:name=".seller.Seller_Add"
+            android:name=".Seller_Add"
             android:label="Logo" />
         <activity
-            android:name=".seller.Change_Password"
+            android:name=".Change_Password"
             android:label="Change Password" />
         <activity
-            android:name=".seller.Update_Logo"
+            android:name=".Update_Logo"
             android:label="New Logo" />
 
         <activity
-            android:name=".seller.Update_Banner"
+            android:name=".Update_Banner"
             android:label="New Banner" />
         <activity
-            android:name=".seller.Edit_Banner"
+            android:name=".Edit_Banner"
             android:label="Edit Banner" />
         <activity android:name=".User_Mobile" />
-        <activity android:name=".seller.Forget_Password" />
-        <activity android:name=".seller.Purchase_Package" />
+        <activity android:name=".Forget_Password" />
+
+        <activity android:name=".Purchase_Package" />
+
         <activity
-            android:name=".seller.Profile_Update"
-            android:label="Update Profile" />
-        <activity
-            android:name=".seller.SellerAbout_Us"
+            android:name=".SellerAbout_Us"
             android:label="About Us" />
 
         <activity android:name=".ContactUs" />
+
         <activity android:name=".AboutUs" />
-        <activity android:name=".seller.AboutUpdate" />
+
+        <activity android:name=".AboutUpdate" />
+
         <activity
             android:name=".Search_Activity"
             android:label="Search...." />
+
         <activity
             android:name=".Main2Activity_2"
             android:label="@string/title_activity_main2_2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

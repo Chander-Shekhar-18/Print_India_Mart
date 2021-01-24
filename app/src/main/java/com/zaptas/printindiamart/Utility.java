@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.seller;
+package com.zaptas.printindiamart;
 
 import android.Manifest;
 import android.annotation.TargetApi;

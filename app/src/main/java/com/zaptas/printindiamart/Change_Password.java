@@ -1,4 +1,4 @@
-package com.zaptas.printindiamart.seller;
+package com.zaptas.printindiamart;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-import com.zaptas.printindiamart.R;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONException;
