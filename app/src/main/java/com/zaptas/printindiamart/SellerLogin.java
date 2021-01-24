@@ -31,18 +31,19 @@ import static com.zaptas.printindiamart.MainActivity.usertype;
 public class SellerLogin extends AppCompatActivity {
     JSONObject jsonObject;
     private static Response response;
-   static String Errr;
-    EditText Email,password;
-    public  static  String logo;
-   public static String email,password_tv;
+    static String Errr;
+    EditText Email, password;
+    public static String logo;
+    public static String email, password_tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller);
        /* getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);*/
-        Email=(EditText) findViewById(R.id.email);
-        password=(EditText) findViewById(R.id.password);
+        Email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
 
 
         BottomNavigationView bottomNavigationView;
@@ -85,30 +86,34 @@ public class SellerLogin extends AppCompatActivity {
 
     }
 
-    public void signin(View arg){
+    public void signin(View arg) {
         Intent intent = new Intent(SellerLogin.this, SellerRegistration.class);
         startActivity(intent);
     }
-    public void forgetpassword(View arg){
+
+    public void forgetpassword(View arg) {
         Intent intent = new Intent(SellerLogin.this, Forget_Password.class);
         startActivity(intent);
     }
-    public void login(View arg){
-        email= Email.getText().toString();;
-        password_tv= password.getText().toString();;
-        if(email.equals("")){
-            Toast.makeText(getApplicationContext(),"Enter email id",Toast.LENGTH_SHORT).show();
-        }
-        else if(password_tv.equals("")){
-            Toast.makeText(getApplicationContext(),"Enter password.",Toast.LENGTH_SHORT).show();
-        }
-        else {
+
+    public void login(View arg) {
+        email = Email.getText().toString();
+        ;
+        password_tv = password.getText().toString();
+        ;
+        if (email.equals("")) {
+            Toast.makeText(getApplicationContext(), "Enter email id", Toast.LENGTH_SHORT).show();
+        } else if (password_tv.equals("")) {
+            Toast.makeText(getApplicationContext(), "Enter password.", Toast.LENGTH_SHORT).show();
+        } else {
             new Login().execute();
         }
 
     }
+
     class Login extends AsyncTask<Void, Void, Void> {
         ProgressDialog dialog;
+
         /*public void add_filcal(View arg){
             Intent inaction3 = new Intent(v.getContext(), FilCal_ParticularItem.class);
         }*/
@@ -127,23 +132,18 @@ public class SellerLogin extends AppCompatActivity {
             jsonObject = getDataFromWeb();
 
             try {
-                 Errr = jsonObject.getString("error");
-                if(Errr.equals("true")){
+                Errr = jsonObject.getString("error");
+                if (Errr.equals("true")) {
 
 
-
-                }
-                else {
+                } else {
                     if (jsonObject != null) {
                         if (jsonObject.length() > 0) {
 
                             JSONArray array = jsonObject.getJSONArray("data");
-                          //  JSONObject cond = jsonObject.getJSONObject("error");
+                            //  JSONObject cond = jsonObject.getJSONObject("error");
 
                             int lenArray = array.length();
-
-
-
 
 
                             if (lenArray > 0) {
@@ -163,7 +163,7 @@ public class SellerLogin extends AppCompatActivity {
                                     String anual_incom = innerObject.getString("image");
                                     String numberemp = innerObject.getString("number_emp");
                                     String busname = innerObject.getString("Business_name");
-                              String logo12 = innerObject.getString("logo");
+                                    String logo12 = innerObject.getString("logo");
                                     String add1 = innerObject.getString("b_address");
                                     String city = innerObject.getString("b_city");
                                     String pincode = innerObject.getString("b_pincode");
@@ -181,40 +181,40 @@ public class SellerLogin extends AppCompatActivity {
                                     String package1 = innerObject.getString("package");
 
 
-                                    Methods.saveUSERID(SellerLogin.this,user_id);
-                                    Methods.saveUSERNAME(SellerLogin.this,f_name);
-                                    Methods.saveLUSERNAME(SellerLogin.this,l_name);
-                                    Methods.saveEmailID(SellerLogin.this,email);
-                                    Methods.saveREGID(SellerLogin.this,registartionid);
-                                    Methods.saveMobileNo(SellerLogin.this,phone);
-                                    Methods.saveUserIMG(SellerLogin.this,image);
-                                    Methods.saveLogo(SellerLogin.this,logo12);
-                                    Methods.savePinCode(SellerLogin.this,pincode);
-                                    Methods.saveAdress(SellerLogin.this,add1);
-                                    Methods.saveCity(SellerLogin.this,city);
-                                    Methods.saveUSERTYPE(SellerLogin.this,"seller");
-                                    Methods.saveComapny(SellerLogin.this,busname);
-                                    Methods.saveabout(SellerLogin.this,about);
-                                    Methods.savepack_zaptas(SellerLogin.this,package1);
+                                    Methods.saveUSERID(SellerLogin.this, user_id);
+                                    Methods.saveUSERNAME(SellerLogin.this, f_name);
+                                    Methods.saveLUSERNAME(SellerLogin.this, l_name);
+                                    Methods.saveEmailID(SellerLogin.this, email);
+                                    Methods.saveREGID(SellerLogin.this, registartionid);
+                                    Methods.saveMobileNo(SellerLogin.this, phone);
+                                    Methods.saveUserIMG(SellerLogin.this, image);
+                                    Methods.saveLogo(SellerLogin.this, logo12);
+                                    Methods.savePinCode(SellerLogin.this, pincode);
+                                    Methods.saveAdress(SellerLogin.this, add1);
+                                    Methods.saveCity(SellerLogin.this, city);
+                                    Methods.saveUSERTYPE(SellerLogin.this, "seller");
+                                    Methods.saveComapny(SellerLogin.this, busname);
+                                    Methods.saveabout(SellerLogin.this, about);
+                                    Methods.savepack_zaptas(SellerLogin.this, package1);
 
 
-                                    Methods.saveanualturn(SellerLogin.this,anualturn);
-                                    Methods.savebtype(SellerLogin.this,businesstype);
-                                    Methods.saveownertype(SellerLogin.this,ownertype);
-                                    Methods.savegst(SellerLogin.this,gst);
-                                    Methods.savetan(SellerLogin.this,tin);
-                                    Methods.saveturn(SellerLogin.this,turn);
-                                    Methods.savepan(SellerLogin.this,pan);
-                                    Methods.savenemp(SellerLogin.this,nempl);
-                                    Methods.saveturn(SellerLogin.this,cindgft);
-                                    Methods.savecin(SellerLogin.this,cin);
+                                    Methods.saveanualturn(SellerLogin.this, anualturn);
+                                    Methods.savebtype(SellerLogin.this, businesstype);
+                                    Methods.saveownertype(SellerLogin.this, ownertype);
+                                    Methods.savegst(SellerLogin.this, gst);
+                                    Methods.savetan(SellerLogin.this, tin);
+                                    Methods.saveturn(SellerLogin.this, turn);
+                                    Methods.savepan(SellerLogin.this, pan);
+                                    Methods.savenemp(SellerLogin.this, nempl);
+                                    Methods.saveturn(SellerLogin.this, cindgft);
+                                    Methods.savecin(SellerLogin.this, cin);
 
 
                                 }
                                 //     Collections.reverse(productlist);
                             }
 
-                        /////////////////
+                            /////////////////
 
 
                         }
@@ -238,7 +238,7 @@ public class SellerLogin extends AppCompatActivity {
             super.onPostExecute(aVoid);
             dialog.dismiss();
 
-            if(Errr.equals("true")){
+            if (Errr.equals("true")) {
 
                 Toast.makeText(getApplicationContext(), "Username Password Mismatch",
                         Toast.LENGTH_LONG).show();
@@ -255,14 +255,14 @@ public class SellerLogin extends AppCompatActivity {
 
                     //   http://spacenterio.com/subdomain/filfox/ApiAdminController/query_get/ff12092018131049
 
-                    .url("http://printindiamart.com/public/api/sellerlogin_get/"+email+"/"+password_tv)
+                    .url("http://printindiamart.com/public/api/sellerlogin_get/" + email + "/" + password_tv)
                     .build();
 
             response = client.newCall(request).execute();
-          //  System.out.println("8878788787"+"http://spacenterio.com/subdomain/filfox/ApiAdminController/query_get/"+meth_username);
+            //  System.out.println("8878788787"+"http://spacenterio.com/subdomain/filfox/ApiAdminController/query_get/"+meth_username);
             return new JSONObject(response.body().string());
         } catch (@NonNull IOException | JSONException e) {
-           // Log.e(TAG, "" + e.getLocalizedMessage());
+            // Log.e(TAG, "" + e.getLocalizedMessage());
         }
         return null;
     }
