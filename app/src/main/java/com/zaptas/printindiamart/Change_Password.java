@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,12 +26,14 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public class Change_Password extends AppCompatActivity {
-EditText old,newpass,confirmpass;
-    static  String oldd,neww,confirmm,se_id,red,msg,error;
+    EditText old, newpass, confirmpass;
+    ImageView imageViewChangePassword;
+    static String oldd, neww, confirmm, se_id, red, msg, error;
     private static Response response;
     JSONObject jsonObject;
     final Context context = this;
-   // static String se_id,lead12,product,packagename,time,price;
+
+    // static String se_id,lead12,product,packagename,time,price;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,11 +41,19 @@ EditText old,newpass,confirmpass;
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        confirmpass=(EditText) findViewById(R.id.confirmpass);
-        newpass=(EditText) findViewById(R.id.newpass);
-        old=(EditText) findViewById(R.id.old);
-        se_id=  Methods.getUSERID(this);
+        confirmpass = (EditText) findViewById(R.id.confirmpass);
+        newpass = (EditText) findViewById(R.id.newpass);
+        imageViewChangePassword = findViewById(R.id.iv_changePassword);
+        imageViewChangePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        old = (EditText) findViewById(R.id.old);
+        se_id = Methods.getUSERID(this);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -52,25 +63,23 @@ EditText old,newpass,confirmpass;
         }
         return true;
     }
-    public void update(View arg){
+
+    public void update(View arg) {
         oldd = old.getText().toString();
         neww = newpass.getText().toString();
         confirmm = confirmpass.getText().toString();
 
-        if(oldd.equals("") || neww.equals("") || confirmm.equals("")){
-            Toast.makeText(getApplicationContext(),"All feild mandatory",Toast.LENGTH_SHORT).show();
-        }
-        else {
-            if(neww.equals(confirmm)){
+        if (oldd.equals("") || neww.equals("") || confirmm.equals("")) {
+            Toast.makeText(getApplicationContext(), "All feild mandatory", Toast.LENGTH_SHORT).show();
+        } else {
+            if (neww.equals(confirmm)) {
                 change_password asyncT = new change_password();
                 asyncT.execute();
-            }
-            else {
+            } else {
                 Toast.makeText(getApplicationContext(), "Password and confirm password not match",
                         Toast.LENGTH_LONG).show();
             }
         }
-
 
 
     }
@@ -244,15 +253,9 @@ EditText old,newpass,confirmpass;
     }*/
 
 
-
-
-
-
-
-
-
     class change_password extends AsyncTask<Void, Void, Void> {
         ProgressDialog dialog;
+
         /*public void add_filcal(View arg){
             Intent inaction3 = new Intent(v.getContext(), FilCal_ParticularItem.class);
         }*/
@@ -275,8 +278,6 @@ EditText old,newpass,confirmpass;
                 error = jsonObject.getString("error");
 
 
-
-
             } catch (JSONException je) {
                 //  Log.i(ParticularImage.TAG, "" + je.getLocalizedMessage());
             }
@@ -287,18 +288,16 @@ EditText old,newpass,confirmpass;
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
             dialog.dismiss();
-            if(error.equals("false")){
+            if (error.equals("false")) {
                 Toast.makeText(getApplicationContext(), msg,
                         Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Change_Password.this, Dashboard_Seller.class);
                 startActivity(intent);
-            }
-            else {
+            } else {
 
                 Toast.makeText(getApplicationContext(), msg,
                         Toast.LENGTH_LONG).show();
             }
-
 
 
         }
@@ -311,7 +310,7 @@ EditText old,newpass,confirmpass;
 
                     //   http://spacenterio.com/subdomain/filfox/ApiAdminController/query_get/ff12092018131049
 
-                    .url("https://printindiamart.com/public/api/change_password/"+se_id+"/"+oldd+"/"+neww)
+                    .url("https://printindiamart.com/public/api/change_password/" + se_id + "/" + oldd + "/" + neww)
                     .build();
 
             response = client.newCall(request).execute();

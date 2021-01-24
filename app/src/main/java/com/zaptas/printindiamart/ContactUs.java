@@ -24,29 +24,30 @@ import static androidx.constraintlayout.widget.Constraints.TAG;
 public class ContactUs extends AppCompatActivity {
     private WebView webview;
     private ProgressDialog progressBar;
-  AlertDialog alertDialog;
-  ImageView iv_back;
+    AlertDialog alertDialog;
+    ImageView iv_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
-        webview = (WebView)findViewById(R.id.webview);
-        iv_back=(ImageView)findViewById(R.id.iv_back) ;
+        webview = (WebView) findViewById(R.id.webview);
+        iv_back = (ImageView) findViewById(R.id.iv_back);
 
-iv_back.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        finish();
-    }
-});
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         WebSettings webSettings = webview.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webview.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-      progressBar=new ProgressDialog(ContactUs.this);
-      progressBar.setMessage("Please Wait Loading.......");
-      progressBar.show();
+        progressBar = new ProgressDialog(ContactUs.this);
+        progressBar.setMessage("Please Wait Loading.......");
+        progressBar.show();
 
-    //    progressBar = ProgressDialog.show(getContext(), "Please Wait Loading.......", "Loading...");
+        //    progressBar = ProgressDialog.show(getContext(), "Please Wait Loading.......", "Loading...");
 
         webview.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -97,9 +98,8 @@ iv_back.setOnClickListener(new View.OnClickListener() {
         webview.loadUrl("https://printindiamart.com/contactus");
 
 
-
-
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

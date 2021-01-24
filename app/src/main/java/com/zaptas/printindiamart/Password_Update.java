@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,7 @@ public class Password_Update extends AppCompatActivity {
     static  String oldd,neww,confirmm,se_id_id,red,msg,error;
     private static Response response;
     JSONObject jsonObject;
+    ImageView imageViewUpdatePassword;
     final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,13 @@ public class Password_Update extends AppCompatActivity {
         setContentView(R.layout.activity_password__update);
         newpass= (EditText) findViewById(R.id.newpass);
         confirmpass= (EditText) findViewById(R.id.confirmpass);
+        imageViewUpdatePassword = findViewById(R.id.iv_updatePasssword);
+        imageViewUpdatePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         Bundle bundle = getIntent().getExtras();

@@ -24,6 +24,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,6 +65,7 @@ import static com.zaptas.printindiamart.MainActivity.usertype;
 public class AddProduct extends AppCompatActivity {
     EditText productname, product_quantity, product_ammount, product_desc, product_feature;
     Spinner spinner_one, spinner_two;
+    ImageView iv_white;
 
     public static int img1 = 1, img3 = 1, img2 = 1;
     private static Response response1;
@@ -100,8 +102,9 @@ public class AddProduct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
 
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //      getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+
         spinner_one = (Spinner) findViewById(R.id.spinner1);
         spinner_two = (Spinner) findViewById(R.id.spinner2);
 
@@ -123,6 +126,14 @@ public class AddProduct extends AppCompatActivity {
         img2 = 1;
         img3 = 1;
         se_id = Methods.getUSERID(this);
+
+        iv_white = findViewById(R.id.iv_white);
+        iv_white.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               finish();
+            }
+        });
 
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
