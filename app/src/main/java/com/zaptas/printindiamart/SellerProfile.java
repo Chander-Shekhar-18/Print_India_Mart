@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
-import com.zaptas.printindiamart.seller.Dashboard_Seller;
 import com.zaptas.printindiamart.util.Methods;
 
 import static com.zaptas.printindiamart.MainActivity.user_id;

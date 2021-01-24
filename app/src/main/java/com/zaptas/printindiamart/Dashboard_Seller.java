@@ -55,8 +55,6 @@ public class Dashboard_Seller extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
-        bottomNavigationView.setSelectedItemId(R.id.myAccount);
         bottomNavigationView.setSelectedItemId(R.id.becomeSeller);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

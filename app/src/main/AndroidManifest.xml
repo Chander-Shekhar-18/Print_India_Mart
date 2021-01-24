@@ -34,12 +34,6 @@
             android:name=".SellerLogin"
             android:label="Seller" />
         <activity
-            android:name=".seller.Dashboard_Seller"
-            android:label="Dashboard" />
-        <activity
-            android:name=".seller.AddProduct"
-            android:label="Add Product" />
-        <activity
             android:name=".seller.SellerProfile"
             android:label="Profile" />
         <activity
@@ -54,9 +48,6 @@
         <activity
             android:name=".ViewAllSubCategory"
             android:label="Lead" />
-        <activity
-            android:name=".seller.ManageProduct"
-            android:label="Manage Product" />
         <activity android:name=".startingscreen.Seller_OTP" />
         <activity android:name=".Seller_Psw" />
         <activity android:name=".Product_Detail" />
@@ -70,7 +61,6 @@
         <activity
             android:name=".seller.Change_Password"
             android:label="Change Password" />
-        <activity android:name=".seller.EditProduct_Seller" />
         <activity
             android:name=".seller.Update_Logo"
             android:label="New Logo" />

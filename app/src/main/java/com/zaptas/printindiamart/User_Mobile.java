@@ -19,7 +19,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
-import com.zaptas.printindiamart.seller.Dashboard_Seller;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONException;
@@ -54,7 +53,6 @@ public class User_Mobile extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setSelectedItemId(R.id.homeNavigation);
         bottomNavigationView.setSelectedItemId(R.id.myAccount);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

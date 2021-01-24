@@ -25,7 +25,6 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import com.zaptas.printindiamart.actor.SlideActor;
-import com.zaptas.printindiamart.seller.Dashboard_Seller;
 import com.zaptas.printindiamart.util.Methods;
 
 import org.json.JSONArray;

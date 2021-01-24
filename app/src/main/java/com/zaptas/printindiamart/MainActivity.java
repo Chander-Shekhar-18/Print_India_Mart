@@ -49,7 +49,6 @@ import com.squareup.picasso.Picasso;
 import com.zaptas.printindiamart.actor.SlideActor;
 import com.zaptas.printindiamart.models.SectionDataModel;
 import com.zaptas.printindiamart.models.SingleItemModel;
-import com.zaptas.printindiamart.seller.Dashboard_Seller;
 import com.zaptas.printindiamart.util.Methods;
 import com.zaptas.printindiamart.wideget.RecyclerViewWithNavigationArrows;
 
