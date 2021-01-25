@@ -184,7 +184,7 @@ public class Product_Detail extends AppCompatActivity implements BaseSliderView.
                                     file_maps.put(sli_name, sli_image);
 
                                     for (final String name1 : file_maps.keySet()) {
-                                        TextSliderView textSliderView = new TextSliderView(getApplicationContext());
+                                        /*TextSliderView textSliderView = new TextSliderView(getApplicationContext());
 
                                         textSliderView
                                                 .description(name1)
@@ -192,8 +192,8 @@ public class Product_Detail extends AppCompatActivity implements BaseSliderView.
                                                 .setScaleType(BaseSliderView.ScaleType.Fit);
 
                                         textSliderView.bundle(new Bundle());
-                                        textSliderView.getBundle().putString("extra", name1);
-                                        //mDemoSlider.addSlider(textSliderView);
+                                        textSliderView.getBundle().putString("extra", name1);*/
+                                       // mDemoSlider.addSlider(textSliderView);
 
                                     }
 
