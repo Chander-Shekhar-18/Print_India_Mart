@@ -71,6 +71,7 @@
             android:name=".Update_Logo"
             android:label="New Logo" />
 
+        <activity android:name=".EditProduct_Seller"/>
         <activity
             android:name=".Update_Banner"
             android:label="New Banner" />

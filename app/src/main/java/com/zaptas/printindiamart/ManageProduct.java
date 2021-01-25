@@ -47,6 +47,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static com.zaptas.printindiamart.MainActivity.user_id;
 import static com.zaptas.printindiamart.MainActivity.usertype;
 
@@ -667,7 +668,7 @@ public class ManageProduct extends AppCompatActivity {
             Toast.makeText(ManageProduct.context, apimsg, Toast.LENGTH_LONG).show();
             if (apierror.equals("false")) {
                 Intent intent = new Intent(ManageProduct.context, ManageProduct.class);
-
+                intent.setFlags(FLAG_ACTIVITY_NEW_TASK);
                 ManageProduct.context.startActivity(intent);
             }
           /*  dialog.dismiss();

@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity
         slideModels.add(new SlideModel(R.drawable.slider7, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.slider3, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.slider4, ScaleTypes.FIT));
-        slideModels.add(new SlideModel(R.drawable.slider5, ScaleTypes.FIT));
+        slideModels.add(new SlideModel(R.drawable.cs, ScaleTypes.FIT));
         slideModels.add(new SlideModel(R.drawable.slider6, ScaleTypes.FIT));
 
         slider.setImageList(slideModels, ScaleTypes.FIT);
