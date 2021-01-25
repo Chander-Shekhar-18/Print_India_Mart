@@ -19,6 +19,7 @@
 
         </activity>
 
+        <activity android:name=".Profile_Update"/>
         <activity android:name=".Dashboard_Seller"/>
 
         <activity android:name=".startingscreen.SplashSreen">

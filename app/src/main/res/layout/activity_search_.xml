@@ -43,11 +43,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
             android:elevation="6dp"
+            android:padding="50dp"
             app:cardCornerRadius="6dp">
 
             <RelativeLayout
@@ -56,17 +54,16 @@
 
                 <EditText
                     android:id="@+id/search"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="30dp"
-                    android:background="@color/white"
+                    android:layout_centerHorizontal="true"
                     android:gravity="center"
                     android:hint="Search ..."
                     android:padding="8dp"
                     android:textColor="#FFA000"
-                    android:textColorHint="#FFA000"
                     android:textSize="18sp" />
 
                 <Button
@@ -78,6 +75,7 @@
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/custom_button"
                     android:onClick="submit"
+                    android:textSize="20sp"
                     android:text="Search"
                     android:textColor="#fff" />
 

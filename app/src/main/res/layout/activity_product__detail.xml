@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="#F20288D1"
+        android:id="@+id/neww"
         android:orientation="horizontal">
 
         <ImageView
@@ -47,16 +48,17 @@
             android:orientation="vertical">
 
 
-            <com.daimajia.slider.library.SliderLayout
+            <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginLeft="6dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginEnd="6dp"
+                app:iss_auto_cycle="true"
+                app:iss_period="1000"
                 android:layout_marginRight="6dp"
-                custom:pager_animation_span="1100"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp" />
 

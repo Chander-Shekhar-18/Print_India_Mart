@@ -20,6 +20,9 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -34,6 +37,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import static com.zaptas.printindiamart.MainActivity.user_id;
 import static com.zaptas.printindiamart.MainActivity.usertype;
@@ -60,7 +64,7 @@ public class Product_Detail extends AppCompatActivity implements BaseSliderView.
     /*    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);*/
         sli_list = new ArrayList<>();
-        mDemoSlider = (SliderLayout) findViewById(R.id.slider);
+       /* mDemoSlider = (SliderLayout) findViewById(R.id.slider);
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
         mDemoSlider.setCustomAnimation(new DescriptionAnimation());
@@ -71,7 +75,7 @@ public class Product_Detail extends AppCompatActivity implements BaseSliderView.
             public void onClick(View v) {
 
             }
-        });
+        });*/
         prd_name = (TextView) findViewById(R.id.prdname);
         prd_desc = (TextView) findViewById(R.id.prddescription);
         prd_ammount = (TextView) findViewById(R.id.prdamount);
@@ -179,12 +183,17 @@ public class Product_Detail extends AppCompatActivity implements BaseSliderView.
                                 sli_actor.setImage(sli_image);
                                 sli_list.add(sli_actor);
 
+                                ImageSlider slider = (ImageSlider) findViewById(R.id.slider);
+
+                                List<SlideModel> slideModels = new ArrayList<>();
+
+
                                 try {
                                     file_maps = new HashMap<String, String>();
                                     file_maps.put(sli_name, sli_image);
 
                                     for (final String name1 : file_maps.keySet()) {
-                                        TextSliderView textSliderView = new TextSliderView(getApplicationContext());
+                                        /*TextSliderView textSliderView = new TextSliderView(getApplicationContext());
 
                                         textSliderView
                                                 .description(name1)
@@ -192,10 +201,15 @@ public class Product_Detail extends AppCompatActivity implements BaseSliderView.
                                                 .setScaleType(BaseSliderView.ScaleType.Fit);
 
                                         textSliderView.bundle(new Bundle());
-                                        textSliderView.getBundle().putString("extra", name1);
-                                        //mDemoSlider.addSlider(textSliderView);
+                                        textSliderView.getBundle().putString("extra", name1);*/
+                                        // mDemoSlider.addSlider(textSliderView);
+
+
+                                        slideModels.add(new SlideModel(file_maps.get(name1), ScaleTypes.FIT));
 
                                     }
+
+                                    slider.setImageList(slideModels, ScaleTypes.FIT);
 
                                 } catch (Exception e) {
                                 }
