@@ -5,12 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rel1"
-    tools:context="com.zaptas.printindiamart.seller.ManageProduct">
+    tools:context=".ManageProduct">
+    <RelativeLayout
+        android:id="@+id/idRelativeManageProduct"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#F20288D1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_ManageProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/iv_ManageProduct"
+            android:text="Manage your product"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/slider"
+        android:layout_below="@+id/idRelativeManageProduct"
         android:layout_marginTop="8dp"
         android:scrollbars="none" />
 

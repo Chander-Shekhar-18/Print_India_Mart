@@ -55,7 +55,7 @@ public class ManageProduct extends AppCompatActivity {
     private static Response response1;
     private static Response response;
     static String deleid, apimsg, apierror;
-
+    ImageView imageViewManageProduct;
     private static Context context;
     static String usertype, user_id;
     int lenArray;
@@ -82,6 +82,14 @@ public class ManageProduct extends AppCompatActivity {
         setContentView(R.layout.activity_manage_product);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //      getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        imageViewManageProduct = findViewById(R.id.iv_ManageProduct);
+        imageViewManageProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
@@ -265,7 +273,6 @@ public class ManageProduct extends AppCompatActivity {
                 this.recycler_view_list = (RecyclerViewWithNavigationArrows) view.findViewById(R.id.recycler_view_list);
                 this.itemTitle2 = (TextView) view.findViewById(R.id.itemTitle2);
                 this.itemTitle3 = (TextView) view.findViewById(R.id.itemTitle3);
-
                 this.quantity = (TextView) view.findViewById(R.id.quantity);
                 this.ammount = (TextView) view.findViewById(R.id.ammount);
                 this.category1 = (TextView) view.findViewById(R.id.category11);

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,7 +36,7 @@ import static com.zaptas.printindiamart.MainActivity.usertype;
 public class Profile_Update extends AppCompatActivity {
     EditText firstname, lastname, mobileno, companyname, pin, city, adress, business, noe, anuaal, ownership, gst, tan, pan, cin, dgft;
     String se_id, firstname_t, lastname_t, mobile_no, companyname_t, pin_t, city_t, adress_t, business_t, noe_t, annual_t, ownership_t, gst_t, tan_t, pan_t, cin_t, dgft_t;
-
+    ImageView imageViewBtnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +59,16 @@ public class Profile_Update extends AppCompatActivity {
         tan = (EditText) findViewById(R.id.tan);
         pan = (EditText) findViewById(R.id.pan);
         cin = (EditText) findViewById(R.id.cin);
+        imageViewBtnBack = findViewById(R.id.btnBack);
         dgft = (EditText) findViewById(R.id.dgft);
 
+
+        imageViewBtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.becomeSeller);
