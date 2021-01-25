@@ -49,8 +49,8 @@ public class SellerRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seller_registration);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
         fname = (EditText) findViewById(R.id.firstname);
         lname = (EditText) findViewById(R.id.lastname);
         company_namre = (EditText) findViewById(R.id.comapnyname);
@@ -249,6 +249,10 @@ public class SellerRegistration extends AppCompatActivity {
 
         }
         return result.toString();
+    }
+    public void signin(View arg) {
+        Intent intent = new Intent(getApplicationContext(), SellerLogin.class);
+        startActivity(intent);
     }
 
     @Override

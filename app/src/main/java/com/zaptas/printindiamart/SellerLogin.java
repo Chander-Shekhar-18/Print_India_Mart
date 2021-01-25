@@ -87,13 +87,15 @@ public class SellerLogin extends AppCompatActivity {
     }
 
     public void signin(View arg) {
-        Intent intent = new Intent(SellerLogin.this, SellerRegistration.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(SellerLogin.this, SellerRegistration.class);
+        startActivity(intent);*/
+        Toast.makeText(getApplicationContext(), "Please! go to website for registration", Toast.LENGTH_SHORT).show();
     }
 
     public void forgetpassword(View arg) {
-        Intent intent = new Intent(SellerLogin.this, Forget_Password.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(SellerLogin.this, Forget_Password.class);
+        startActivity(intent);*/
+        Toast.makeText(getApplicationContext(), "Plese! go to website for reset the password", Toast.LENGTH_SHORT).show();
     }
 
     public void login(View arg) {

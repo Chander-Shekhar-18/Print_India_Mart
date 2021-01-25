@@ -16,12 +16,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 import com.zaptas.printindiamart.util.Methods;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 import static com.zaptas.printindiamart.MainActivity.user_id;
 import static com.zaptas.printindiamart.MainActivity.usertype;
 
 public class SellerProfile extends AppCompatActivity {
     TextView name, designation, location, mobileNumber, gender, email, companyname, noempl, btype, anual, ownership, gst, tan, pann, cin, dgft;
-    ImageView profile;
+    CircleImageView profile;
     static String user_img;
     private Context mContext;
 
@@ -82,7 +84,7 @@ public class SellerProfile extends AppCompatActivity {
         cin = (TextView) findViewById(R.id.cin);
         pann = (TextView) findViewById(R.id.pann);
         dgft = (TextView) findViewById(R.id.dgft);
-        profile = (ImageView) findViewById(R.id.profile);
+        profile = (CircleImageView) findViewById(R.id.profile);
         location = (TextView) findViewById(R.id.location);
         gst = (TextView) findViewById(R.id.gst);
         mobileNumber = (TextView) findViewById(R.id.mobileNumber);
@@ -112,9 +114,7 @@ public class SellerProfile extends AppCompatActivity {
         ownership.setText(Methods.getownertype(this));
         user_img = Methods.getUserIMG(this);
         mobileNumber.setText(Methods.getMobileNo(this));
-        Picasso.get().load("https://printindiamart.com/public/upload_files/user/" + user_img).into(profile);
-
-
+        Picasso.get().load("https://printindiamart.com/public/upload_files/user/" + user_img).placeholder(R.drawable.user_profile).into(profile);
     }
 
     public void profileupdate(View arg) {

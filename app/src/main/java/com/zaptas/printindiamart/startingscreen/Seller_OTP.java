@@ -36,8 +36,8 @@ public class Seller_OTP extends AppCompatActivity {
         setContentView(R.layout.activity_seller__otp);
         emailid = getIntent().getStringExtra("Emailid");
         otp = (EditText) findViewById(R.id.otp_tv);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
     }
 
