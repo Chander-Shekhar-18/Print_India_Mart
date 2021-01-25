@@ -4,9 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zaptas.printindiamart.seller.Dashboard_Seller">
+    tools:context=".Dashboard_Seller">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#F20288D1"
+        android:id="@+id/idRelativeDashBoard"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_toEndOf="@+id/iv_back"
+            android:text="Seller's dashboard"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
 
     <ScrollView
+        android:layout_below="@+id/idRelativeDashBoard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
