@@ -76,6 +76,15 @@ public class SellerLead extends AppCompatActivity {
         gridview = (GridView)findViewById(R.id.lv_viewall);
         gridview.setAdapter(productadapter_state);
 
+        ImageView imageView;
+        imageView = (ImageView) findViewById(R.id.iv_back);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.becomeSeller);

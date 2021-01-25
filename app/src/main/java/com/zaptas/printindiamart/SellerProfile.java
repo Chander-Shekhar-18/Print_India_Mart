@@ -2,6 +2,7 @@ package com.zaptas.printindiamart;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -31,6 +32,14 @@ public class SellerProfile extends AppCompatActivity {
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //      getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        ImageView imageView;
+        imageView = (ImageView) findViewById(R.id.iv_back);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         BottomNavigationView bottomNavigationView;
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.becomeSeller);
